@@ -12,7 +12,7 @@ function _drawLists() {
 export default class ListController {
   constructor() {
     //NOTE: After the store loads, we can automatically call to draw the lists.
-    // _drawLists();
+    _drawLists();
   }
 
   addList(event) {
@@ -25,6 +25,13 @@ export default class ListController {
     ListService.addList(listData)
     _drawLists()
     formData.reset()
+  }
+
+
+  deleteList(listId) {
+
+    ListService.deleteList(listId)
+    _drawLists()
   }
 
   //TODO: Your app will need the ability to create, and delete both lists and listItems

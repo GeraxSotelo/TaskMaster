@@ -15,6 +15,12 @@ class ListService {
     _store.State.lists.push(new List(listData))
     _store.saveState()
   }
+
+
+  deleteList(listId) {
+    _store.State.lists = _store.State.lists.filter(list => list.id != listId)
+    _store.saveState()
+  }
 }
 
 const SERVICE = new ListService();

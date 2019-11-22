@@ -13,21 +13,22 @@ export default class List {
     return `
       <div class="col-3 bg-info rounded m-1">
         <form>
-            <div class="form-group text-center">
-                <label for="formGroupExampleInput">
-                    <h2>${this.name}</h2>
-                </label>
-                <div class="row">
-                    <div class="col text-left">
-                        <p>list item</p>
-                    </div>
-                    <div class="col text-right">
-                        <i class="fas fa-trash-alt delete-item-btn rounded"></i>
-                    </div>
-                </div>
-                <input type="text" class="form-control" id="addList" placeholder="Add Task...">
-                <button class="btn btn-primary w-50 mt-2">Add</button>
-            </div>
+          <div class="form-group text-center">
+              <label for="formGroupExampleInput">
+                  <i class="delete-list-btn fas fa-times-circle" onclick="app.listController.deleteList('${this.id}')"></i>
+                  <h2>${this.name}</h2>
+              </label>
+              <div class="row">
+                  <div class="col text-left">
+                      <p>list item</p>
+                  </div>
+                  <div class="col text-right">
+                      <i class="fas fa-trash-alt delete-item-btn rounded"></i>
+                  </div>
+              </div>
+              <input type="text" class="form-control" id="addList" placeholder="Add Task...">
+              <button class="btn btn-primary w-50 mt-2">Add</button>
+          </div>
         </form>
       </div>
     `
