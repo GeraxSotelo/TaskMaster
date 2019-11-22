@@ -7,3 +7,9 @@ header, footer {
   color : white;
   height: 8em;
 }
+
+.delete-btn {
+  background-color: red;
+  cursor: pointer;
+  padding: 0.4em;
+}
