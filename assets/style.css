@@ -8,8 +8,17 @@ header, footer {
   height: 8em;
 }
 
-.delete-btn {
+.delete-list-btn {
+  color: rgb(140, 0, 0);
+  cursor: pointer;
+  font-size: 1.2em;
+  position: absolute;
+  top: 2%;;
+  right: 2%
+}
+
+.delete-item-btn {
   background-color: red;
   cursor: pointer;
-  padding: 0.4em;
+  padding: 0.35em;
 }

@@ -12,11 +12,10 @@ function _drawLists() {
 export default class ListController {
   constructor() {
     //NOTE: After the store loads, we can automatically call to draw the lists.
-    _drawLists();
+    // _drawLists();
   }
 
   addList(event) {
-    debugger;
     event.preventDefault()
     let formData = event.target
     let listData = {

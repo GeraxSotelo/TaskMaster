@@ -11,7 +11,7 @@ export default class List {
 
   get template() {
     return `
-      <div class="col-3 bg-info rounded">
+      <div class="col-3 bg-info rounded m-1">
         <form>
             <div class="form-group text-center">
                 <label for="formGroupExampleInput">
@@ -22,7 +22,7 @@ export default class List {
                         <p>list item</p>
                     </div>
                     <div class="col text-right">
-                        <i class="fas fa-trash-alt delete-btn rounded"></i>
+                        <i class="fas fa-trash-alt delete-item-btn rounded"></i>
                     </div>
                 </div>
                 <input type="text" class="form-control" id="addList" placeholder="Add Task...">
