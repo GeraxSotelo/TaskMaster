@@ -13,6 +13,7 @@ class ListService {
 
   addList(listData) {
     _store.State.lists.push(new List(listData))
+    _store.saveState()
   }
 }
 
