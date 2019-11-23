@@ -35,7 +35,7 @@ export default class List {
       <p>${task}</p>
     </div>
     <div class="col text-right">
-      <i class="fas fa-trash-alt delete-item-btn rounded" oncick=""app.listController.deleteTask()></i>
+      <i class="fas fa-trash-alt delete-item-btn rounded" oncick=""app.listController.deleteTask('${this.id}')></i>
     </div>
   </div>
     `

@@ -33,7 +33,7 @@ class Store {
     let saved = JSON.parse(localStorage.getItem("state"));
     if (saved) {
       _state = saved;
-      _state.lists = this.Lists
+      // _state.lists = this.Lists
     }
   }
 }

@@ -3,6 +3,7 @@ import _store from "../store.js"
 
 //Public
 class ListService {
+
   //TODO  Here is where we handle all of our business logic,
   //given the information you need in the controller,
   //what methods will you need to do when this class is first 'constructed'?
@@ -28,6 +29,10 @@ class ListService {
       foundList.tasks.push(task);
     }
     _store.saveState()
+  }
+
+  deleteTask(listId) {
+    let foundList = _store.State.lists.find(list => list.id == listId) //TODO complete logic
   }
 }
 
