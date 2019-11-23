@@ -1,10 +1,11 @@
 import ListService from "../Services/ListService.js";
 import _store from "../store.js"
+import List from "../Models/List.js";
 
 //TODO Don't forget to render to the screen after every data change.
 function _drawLists() {
   let template = ''
-  _store.State.lists.forEach(list => template += list.template)
+  _store.Lists.forEach(list => template += list.ListTemplate)
   document.querySelector("#lists").innerHTML = template
 }
 
@@ -15,7 +16,7 @@ export default class ListController {
     _drawLists();
   }
 
-  addList(event) {
+  addList(event) { /***************ADD LIST***************/
     event.preventDefault()
     let formData = event.target
     let listData = {
@@ -28,9 +29,14 @@ export default class ListController {
   }
 
 
-  deleteList(listId) {
-
+  deleteList(listId) { /***************DELETE LIST***************/
     ListService.deleteList(listId)
+    _drawLists()
+  }
+
+  addTask(event, listId) { /***************ADD TASK***************/
+    event.preventDefault()
+    ListService.addTask(event.target.task.value, listId)
     _drawLists()
   }
 

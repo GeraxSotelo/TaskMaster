@@ -16,9 +16,17 @@ class ListService {
     _store.saveState()
   }
 
-
   deleteList(listId) {
     _store.State.lists = _store.State.lists.filter(list => list.id != listId)
+    _store.saveState()
+  }
+
+  addTask(task, listId) {
+    debugger;
+    let foundList = _store.State.lists.find(list => list.id == listId)
+    if (task != "") {
+      foundList.tasks.push(task);
+    }
     _store.saveState()
   }
 }
