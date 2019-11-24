@@ -12,7 +12,8 @@ export default class List {
 
   get ListTemplate() {
     return `
-      <div class="col-3 bg-info rounded m-1">
+      <div class="col-3 list-container m-1">
+        <i class="pin"></i>
         <form onsubmit="app.listController.addTask(event, '${this.id}')">
           <div class="form-group text-center">
               <label for="task">

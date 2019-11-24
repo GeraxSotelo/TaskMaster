@@ -36,7 +36,7 @@ export default class ListController {
       title: 'Are you sure?',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
+      confirmButtonColor: '#00bd56',
       cancelButtonColor: '#d33',
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
@@ -45,7 +45,7 @@ export default class ListController {
           position: 'center',
           title: 'Deleted!',
           showConfirmButton: false,
-          timer: 500
+          timer: 450
         })
         ListService.deleteList(listId)
         _drawLists()
@@ -64,7 +64,7 @@ export default class ListController {
       title: 'Are you sure?',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
+      confirmButtonColor: '#00bd56',
       cancelButtonColor: '#d33',
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
