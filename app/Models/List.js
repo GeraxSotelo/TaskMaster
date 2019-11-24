@@ -28,14 +28,14 @@ export default class List {
     `
   }
 
-  taskTemplate(task) {
+  taskTemplate(task, index) {
     return `
     <div class="row">
     <div class="col text-left">
       <p>${task}</p>
     </div>
     <div class="col text-right">
-      <i class="fas fa-trash-alt delete-item-btn rounded" oncick=""app.listController.deleteTask('${this.id}')></i>
+      <i class="fas fa-trash-alt delete-item-btn rounded" onclick="app.listController.deleteTask('${this.id}', ${index})"></i>
     </div>
   </div>
     `
@@ -43,9 +43,7 @@ export default class List {
 
   drawTask() {
     let template = ''
-    this.tasks.map(task => {
-      template += this.taskTemplate(task)
-    })
+    this.tasks.map((task, i) => template += this.taskTemplate(task, i)) //grab each task value and its index
     return template
   }
 }

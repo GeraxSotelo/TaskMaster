@@ -23,7 +23,6 @@ class ListService {
   }
 
   addTask(task, listId) {
-    debugger;
     let foundList = _store.State.lists.find(list => list.id == listId)
     if (task != "") {
       foundList.tasks.push(task);
@@ -31,8 +30,10 @@ class ListService {
     _store.saveState()
   }
 
-  deleteTask(listId) {
-    let foundList = _store.State.lists.find(list => list.id == listId) //TODO complete logic
+  deleteTask(listId, taskIndex) {
+    let foundList = _store.State.lists.find(list => list.id == listId)
+    foundList.tasks.splice(taskIndex, 1)
+    _store.saveState()
   }
 }
 
