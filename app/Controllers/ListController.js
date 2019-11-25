@@ -22,7 +22,8 @@ export default class ListController {
     event.preventDefault()
     let formData = event.target
     let listData = {
-      name: formData.name.value
+      name: formData.name.value,
+      color: formData.color.value
     }
 
     ListService.addList(listData)
@@ -81,5 +82,5 @@ export default class ListController {
     })
   }
 
-  //TODO: Your app will need the ability to create, and delete both lists and listItems
+
 }
