@@ -1,25 +1,18 @@
-body {
-  background: url('images/chalkboard-black.jpg') no-repeat center;
-  background-size: cover;
-}
+
 
 main {
-  background-color: rgba(255, 255, 255, 0);
   /* https://previews.123rf.com/images/silvia/silvia0801/silvia080100001/2310439-square-background-cork-board.jpg */
-  /* background: url("https://previews.123rf.com/images/flukesamed/flukesamed1304/flukesamed130400049/19059324-cork-board-background-texture.jpg") no-repeat center;
-  background-size: cover; */
-  min-height: 50vh;
+  background: url("https://previews.123rf.com/images/flukesamed/flukesamed1304/flukesamed130400049/19059324-cork-board-background-texture.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 75vh;
 }
 
 header, footer {
-  background-color: rgba(255, 255, 255, 0);
+  background: url('images/chalkboard-black.jpg') no-repeat center;
+  background-size: cover;
   color: rgba(255, 255, 255, 0.9);
   font-family: 'Permanent Marker', cursive;
   height: 8em;
-}
-
-.form-container {
-  background-color: rgba(255, 255, 255, 0);
 }
 
 .handwriting {
@@ -28,11 +21,6 @@ header, footer {
 
 .color-selector {
   max-width: 25%;
-}
-
-#lists {
-  background: url("https://previews.123rf.com/images/flukesamed/flukesamed1304/flukesamed130400049/19059324-cork-board-background-texture.jpg") no-repeat center;
-  background-size: cover;
 }
 
 .list-container {
