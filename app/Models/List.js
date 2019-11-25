@@ -13,20 +13,20 @@ export default class List {
 
   get ListTemplate() {
     return `
-      <div class="col-10 col-md-3 list-container m-1" style="background-color: ${this.color};">
-        <i class="pin"></i>
-        <form onsubmit="app.listController.addTask(event, '${this.id}')">
-          <div class="form-group text-center">
-              <label for="task">
-                <i class="delete-list-btn fas fa-times-circle" onclick="app.listController.deleteList('${this.id}')"></i>
-                <h2 class="handwriting">${this.name}</h2>
-              </label>
-              ${this.drawTask()}
-              <input type="text" name="task" class="form-control" id="addList" placeholder="Add Task...">
-              <button class="btn btn-primary w-50 mt-2">Add</button>
-          </div>
-        </form>
-      </div>
+      <div class="grid-item col-10 col-md-6 list-container m-1" style="background-color: ${this.color};">
+          <i class="pin"></i>
+          <form onsubmit="app.listController.addTask(event, '${this.id}')">
+            <div class="form-group text-center">
+                <label for="task">
+                  <i class="delete-list-btn fas fa-times-circle" onclick="app.listController.deleteList('${this.id}')"></i>
+                  <h2 class="handwriting">${this.name}</h2>
+                </label>
+                ${this.drawTask()}
+                <input type="text" name="task" class="form-control" id="addList" placeholder="Add Task...">
+                <button class="btn btn-primary w-50 mt-2">Add</button>
+            </div>
+          </form>
+        </div>
     `
   }
 
